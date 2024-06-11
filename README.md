@@ -69,8 +69,17 @@ We provide the implementation code in `main.py`. Below are the descriptions for 
 - `batch_size`: Batch size for training critics for MI estimation. (dtype: `int`)
 - `learning_rate`: Learning rate training critics for MI estimation. (dtype: `float`)
 - `n_steps`: Number of steps for training critics for MI estimation. (dtype: `int`)
-- `mode`: Mode for setting true MI values. For `stepwise`, true MI values are set as [2, 4, 6, 8, 10] and change for `n_steps`$`//4`$. For `single`, true MI value is defined in the `true_mi` argument (Options: stepwise, single)
+- `mode`: Mode for setting true MI values. For `stepwise`, true MI values are set as [2, 4, 6, 8, 10] and change for `n_steps`//4. For `single`, true MI value is defined in the `true_mi` argument (Options: stepwise, single)
 - `true_mi`: True MI value for estimation. This value is used to calculate the crossover probability of the binary symmetric channel. Ignore this argument if you set `mode` as `stepwise`. (dtype: `float`)
+
+##### Default setup for training critic functions
+- `critic_type`: joint
+- `critic_depth`: 2
+- `critic_width`: 256
+- `critic_embed`: 32
+- `batch_size`: 64
+- `learning_rate`: 0.0005
+- `n_steps`: 20000
 
 ### Examples
 Here we provide the simple examples in step by step.
