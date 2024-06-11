@@ -24,7 +24,7 @@ parser.add_argument("--dname1", type=str, default="mnist", choices=["mnist", "ci
 parser.add_argument("--dname2", type=str, default="imdb.bert-imdb-finetuned", choices=["imdb.bert-imdb-finetuned", "imdb.roberta-imdb-finetuned"])  # Dataname for texts
 parser.add_argument("--nuisance", type=float, default=0)  # Only for images, [0, 1]
 
-parser.add_argument("--output_scale", type=str, default="bit")
+parser.add_argument("--output_scale", type=str, default="bit", choices=["bit", "nat"])
 
 parser.add_argument("--critic_type", type=str, default="joint", choices=["joint", "separable", "bilinear", "inner"])
 parser.add_argument("--critic_depth", type=str, default=2)
