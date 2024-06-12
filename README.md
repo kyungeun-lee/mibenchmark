@@ -1,6 +1,6 @@
 # MI estimation benchmark
 The implementation codes of the paper "A Benchmark Suite for Evaluating Neural Mutual Information Estimators on Unstructured Datasets"
-(Paper url: TBU)
+(Paper URL: TBU)
 
 ## Table of Contents
 - [Overview](#overview)
@@ -9,6 +9,7 @@ The implementation codes of the paper "A Benchmark Suite for Evaluating Neural M
 - [Examples](#examples)
 - [License](#license)
 - [Contact](#contact)
+- [References](#references)
 
 ## Overview
 We introduce a comprehensive benchmark suite for evaluating neural MI estimators on unstructured datasets, specifically focusing on images and texts. By leveraging same-class sampling for positive pairing and introducing a binary symmetric channel trick, we show that we can accurately manipulate true MI values of real-world datasets.
@@ -52,7 +53,7 @@ We provide the implementation code in `main.py`. Below are the descriptions for 
 - `savepath`: Path to save the results (dtype: `str`)
 - `ds`: number of information sources (dtype: `int`) -- The number of independent scalar random variables used to form the mutually shared information between `X` and `Y` (Definition 4.1)
 - `dr`: representation dimension (dtype: `int`) -- The size of observational data (Definition 4.2)
-- `dtype`: Data type (Options: gaussian, image, text, misture)
+- `dtype`: Data type (Options: gaussian, image, text, mixture)
 - `dname1`: Data name for images (Ignore this argument if you do not use image datasets.) (Options: mnist, cifar10, cifar100) 
 - `dname2`: Data name for texts (Ignore this argument if you do not use text datasets.) (Options: imdb.bert-imdb-finetuned, imdb.roberta-imdb-finetuned)
 - `nuisance`: Nuisance strength (Applicable only for image datasets.) (dtype: `float`)
@@ -69,7 +70,7 @@ We provide the implementation code in `main.py`. Below are the descriptions for 
 - `batch_size`: Batch size for training critics for MI estimation. (dtype: `int`)
 - `learning_rate`: Learning rate training critics for MI estimation. (dtype: `float`)
 - `n_steps`: Number of steps for training critics for MI estimation. (dtype: `int`)
-- `mode`: Mode for setting true MI values. For `stepwise`, true MI values are set as [2, 4, 6, 8, 10] and change for `n_steps`//4. For `single`, true MI value is defined in the `true_mi` argument (Options: stepwise, single)
+- `mode`: Mode for setting true MI values. For `stepwise`, true MI values are set as [2, 4, 6, 8, 10] and change for `n_steps`//4. For `single`, the true MI value is defined in the `true_mi` argument (Options: stepwise, single)
 - `true_mi`: True MI value for estimation. This value is used to calculate the crossover probability of the binary symmetric channel. Ignore this argument if you set `mode` as `stepwise`. (dtype: `float`)
 
 ##### Default setup for training critic functions
@@ -82,7 +83,7 @@ We provide the implementation code in `main.py`. Below are the descriptions for 
 - `n_steps`: 20000
 
 ### Examples
-Here we provide the simple examples in step by step.
+Here we provide simple examples step by step.
 1. Clone the repository:
     ```sh
     git clone https://github.com/kyungeun.lee/mibenchmark.git
@@ -118,3 +119,8 @@ Apache-2.0 license
 
 ### Contact
 Kyungeun Lee (e-mail: kyungeun.lee@lgresearch.ai)
+
+### References
+- B Poole et al., On Variational Bounds of Mutual Information, ICML, 2019
+- J Song et al., Understanding the Limitations of Variational Mutual Information Estimators, ICLR, 2020 (https://github.com/ermongroup/smile-mi-estimator)
+- https://github.com/google-research/google-research/blob/master/vbmi/README.md
