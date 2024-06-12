@@ -110,6 +110,8 @@ Here we provide the simple examples in step by step.
     ```
 **RESULTS**
 - Estimation logs into `mis.npy` file in the predetermined `savepath`.
+- Estimation results used in the paper are available in `results/*`.
+5. Analyze the estimation results: See the examples in `result_analysis.ipynb`.
 
 ### License
 Apache-2.0 license
