@@ -21,7 +21,7 @@ Our project has been built on Python 3.9. Here is the entire list of python libr
 ``` swift
 argparse==1.1
 torch==2.0.1
-torchvision==0.13.0
+torchvision==0.15.2
 numpy==1.26.0
 scipy==1.10.1
 ```
