@@ -1,6 +1,6 @@
 # MI estimation benchmark
-The implementation codes of the paper "A Benchmark Suite for Evaluating Neural Mutual Information Estimators on Unstructured Datasets"
-(Paper URL: TBU)
+The implementation codes of the paper "A Benchmark Suite for Evaluating Neural Mutual Information Estimators on Unstructured Datasets" (NeurIPS 2024)
+(Paper URL: https://arxiv.org/abs/2410.10924)
 
 ## Table of Contents
 - [Overview](#overview)
@@ -14,7 +14,7 @@ The implementation codes of the paper "A Benchmark Suite for Evaluating Neural M
 ## Overview
 We introduce a comprehensive benchmark suite for evaluating neural MI estimators on unstructured datasets, specifically focusing on images and texts. By leveraging same-class sampling for positive pairing and introducing a binary symmetric channel trick, we show that we can accurately manipulate true MI values of real-world datasets.
 
-See our paper at [TBU].
+See our paper at https://arxiv.org/abs/2410.10924.
 
 ## Required libraries
 Our project has been built on Python 3.9. Here is the entire list of python libraries required (also available in `requirements.txt`):
